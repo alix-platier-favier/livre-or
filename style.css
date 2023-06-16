@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --color-primary: #a7e0e0;
+    --color-light: #e8aabe;
+    --color-light1: #db6a8f;
+    --color-light2: #ca3c66;
+    --color-white: #fff;
+    --color-white-variant: rgba(255, 255, 255, 0.7);
+    --color-black: #000;
+    --color-bg: #11151C;
+    --color-bg1: #212d40;
+    --color-bg2: #294c60;
+
+    --transition: all 400ms ease;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(90deg,var(--color-light),var(--color-primary));
+  
+}
+  
+.slider-thumb::before {
+position: absolute;
+content: "";
+left: 31%;
+top: 20%;
+width: 700px;
+height: 500px;
+background: #17141d;
+border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+will-change: border-radius, transform, opacity;
+animation: sliderShape 5s linear infinite;
+display: block;
+z-index: -1;
+-webkit-animation: sliderShape 5s linear infinite;
+}
+
+@keyframes sliderShape{
+0%,100%{
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translate3d(0,0,0) rotateZ(0.01deg);
+}
+34%{
+    border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+    transform:  translate3d(0,5px,0) rotateZ(0.01deg);
+}
+50%{
+    transform: translate3d(0,0,0) rotateZ(0.01deg);
+}
+67%{
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;
+    transform: translate3d(0,-3px,0) rotateZ(0.01deg);
+}
+}
+
+main h1 {
+    color: var(--color-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    background: transparent;
+    position: relative;
+    padding: 0 15px;
+}
+
+li {
+    position: relative;
+    padding: 50px 20px;
+    height: 100%;
+    display: flex;
+}
+
+a {
+    z-index: 1;
+    color: var(--color-bg1);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+li:before {
+    content: "";
+    position: absolute;
+    height: 33.33%;
+    width: 0;
+    background-color: var(--color-light1);
+    right: 0;
+    z-index: 0;
+    top: 33.33%;
+    transition: var(--transition);
+}
+
+li:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    background-color: var(--color-light1);
+    left: 0;
+    z-index: 0;
+    bottom: 0;
+    transition: var(--transition);
+}
+
+a:before {
+    position:absolute;
+    content: "";
+    width: 0;
+    background-color: var(--color-light1);
+    left: 0;
+    transition: var(--transition);
+}
+
+li:hover:before,
+li:hover:after,
+li:hover a:before{
+    width:100%
+}
