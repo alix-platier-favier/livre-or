@@ -25,7 +25,6 @@ try {
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-        <div class="slider-thumb"></div>
         <div class="top_nav">
             <ul>
             <?php if(!isset($_SESSION['login'])){ ?> 
@@ -43,7 +42,6 @@ try {
             <?php } ?>
             </ul>
         </div>
-
         <section class="form_box" id="table_container">
 
             <?php if (isset($_SESSION['login'])) { ?>

@@ -66,7 +66,7 @@ main h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 80vh;
     font-size: 3.5rem;
     text-transform: uppercase;
     text-align: center;
@@ -134,3 +134,220 @@ li:hover:after,
 li:hover a:before{
     width:100%
 }
+
+
+.top_nav {
+    background-color: var(--color-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.top_nav a {
+    color: var(--color-white);
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+.form_box.login {
+    background-color: var(--color-bg1);
+    width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 50px auto;
+}
+
+.form_box h2 {
+    color: var(--color-white);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form_box .input_box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form_box .input_box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--color-white);
+    border: none;
+    border-bottom: 1px solid var(--color-white);
+    outline: none;
+    background: transparent;
+}
+
+.form_box .input_box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 18px;
+    color: var(--color-white-variant);
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.form_box .input_box input:focus ~ label,
+.form_box .input_box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: var(--color-primary);
+    font-size: 12px;
+}
+
+.form_box .remember_forgot {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form_box .remember_forgot label {
+    color: var(--color-white);
+    font-size: 16px;
+    align-self: center;
+}
+
+.form_box .btn {
+    background-color: var(--color-bg);
+    color: var(--color-white);
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.form_box .btn:hover {
+    background-color: var(--color-light1);
+    transition: var(--transition);
+}
+
+.form_box .login_register {
+    text-align: center;
+    color: var(--color-white);
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.form_box .login_register a:hover {
+    color: var(--color-light);
+    transition: var(--transition);
+}
+
+.form_box .login_register p {
+    margin-bottom: 20px;
+}
+
+.form_box .login_register a {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+#msgerror {
+    color: var(--color-light2);
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form_box.register {
+    background-color: var(--color-bg1);
+    width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 50px auto;
+}
+
+.form_box .login_register {
+    text-align: center;
+    color: var(--color-white);
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.form_box .login_register p {
+    margin-bottom: 10px;
+}
+
+.form_box .login_register a {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.form_box.profil {
+    background-color: var(--color-bg1);
+    width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 50px auto;
+}
+
+.form_box .login_profil {
+    text-align: center;
+    color: var(--color-white);
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.form_box .login_profil p {
+    margin-bottom: 10px;
+}
+
+.form_box .login_profil a {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+#msgProfil {
+    color: greenyellow;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#mybutton {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+#mybutton:hover {
+background-color: var(--color-bg);
+transition: var(--transition);
+
+}
+  
+#comment_container {
+    background-color: var(--color-bg1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    margin: 0 auto;
+  }
+  
+#post {
+    color: var(--color-primary);
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+#comment {
+    color: var(--color-white);
+    font-size: 18px;
+    line-height: 1.5;
+  }

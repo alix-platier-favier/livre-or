@@ -59,33 +59,33 @@ $conn = null;
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>     
-    <header class="top_nav">
-            <nav class="top_nav">
+        <div class="top_nav">
+            <ul>
+            <?php if(!isset($_SESSION['login'])){ ?> 
+                <li><a href="index.php">Home</a></li>
+                <li><a href="inscription.php">Register</a></li>
+                <li><a href="connexion.php">Login</a></li>
+                <li><a href="livreor.php">Guestbook</a></li>
 
-                <?php if(!isset($_SESSION['login'])){ ?> 
-                    <a href="index.php">Home</a>
-                    <a href="inscription.php">Register</a>
-                    <a href="connexion.php">Login</a>
-                    <a href="livreor.php">Guestbook</a>
+            <?php } else{?>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="livreor.php">Guestbook</a></li>
+                <li><a href="profil.php">Modify my Profil</a></li>
+                <li><a href="deconnexion.php">Disconnect</a></li>
 
-                <?php } else{?>
-                    <a href="profil.php">Modify my Profil</a>
-                    <a href="livreor.php">Guestbook</a>
-                    <a href="deconnexion.php">Disconnect</a>
-
-                <?php } ?>
-            </nav>
-        </header>
+            <?php } ?>
+            </ul>
+        </div>
     <div class="form_box login">
         <h2>Login</h2>
         <form action="" method="POST">
             <div class="input_box">
-                <span class="icon"><i class="fas fa-user"></i></span>
+                <span class="icon"></span>
                 <input type="text" name="login" required>
                 <label>Username</label>
             </div>
             <div class="input_box">
-                <span class="icon"><i class="fas fa-lock"></i></span>
+                <span class="icon"></span>
                 <input type="password" name="password" required>
                 <label>Password</label>
             </div>
