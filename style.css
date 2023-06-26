@@ -347,7 +347,7 @@ transition: var(--transition);
   }
   
 #comment {
-    color: var(--color-white);
+    /*color: var(--color-white);*/
     font-size: 18px;
     line-height: 1.5;
   }
