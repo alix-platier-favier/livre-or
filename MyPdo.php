@@ -3,8 +3,8 @@
 include './User.php';
 
 define("SERVERNAME", "localhost:3306");
-define("USERNAME", "admin");
-define("PASSWORD", "acab1312");
+define("USERNAME", "root");
+define("PASSWORD", "159753");
 define("DBNAME", "livreor");
 
 class MyPdo
