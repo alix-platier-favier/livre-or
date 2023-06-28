@@ -60,7 +60,7 @@ $comments = $app->getComments();
             <?php } ?>
         </ul>
     </div>
-    <div class="container">
+    <div class="form_box">
         <form action="" Method="POST" class="flex-column">
 
             <label for="comment">Comments</label>
@@ -72,5 +72,4 @@ $comments = $app->getComments();
         </form>
     </div>
 </body>
-
 </html>

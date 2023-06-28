@@ -41,27 +41,25 @@ $comments = $app->getComments();
             <?php } ?>
         </ul>
     </div>
-    <section class="form_box" id="table_container">
-
+    <div class="form_box">
         <?php if (isset($_SESSION['login'])) { ?>
-            <a href="commentaire.php" id="mybutton"><button id="mybutton">Leave a comment</button></a>
+            <a href="commentaire.php"><button class="mybutton">Leave a comment</button></a>
         <?php }; ?>
-
-        <div class="form_box" id="comment_container">
+        
+        <div class="comment_container">
             <?php
             foreach ($comments as $comment) {
                 $user = $comment['login'];
                 $content = $comment['comment'];
                 $date = date('d-m-Y H:i', strtotime($comment['date']));
-                echo '<p id="post">Posted on the ' . $date .
+                echo '<p class="post">Posted on the ' . $date .
                     ' by ' . $user . '</p><br>' .
-                    '<p id="comment">' . $comment['comment'] .
+                    '<p class="comment">' . $comment['comment'] .
                     '</p><br><br>';
             }
             ?>
         </div>
-    </section>
-    </main>
+    </div>
 </body>
 
 </html>

@@ -26,7 +26,7 @@ body {
     background: linear-gradient(90deg,var(--color-light),var(--color-primary));
   
 }
-  
+
 .slider-thumb::before {
 position: absolute;
 content: "";
@@ -84,7 +84,7 @@ ul {
 
 li {
     position: relative;
-    padding: 50px 20px;
+    margin: 20px;
     height: 100%;
     display: flex;
 }
@@ -148,6 +148,14 @@ li:hover a:before{
     color: var(--color-white);
     font-weight: 500;
     margin: 0 10px;
+}
+
+.form_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .form_box.login {
@@ -313,7 +321,79 @@ li:hover a:before{
     margin-bottom: 10px;
 }
 
-#mybutton {
+.form_box .mybutton {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    width: 700px;
+}
+
+.mybutton:hover {
+background-color: var(--color-bg);
+transition: var(--transition);
+}
+  
+.form_box .comment_container {
+    background-color: var(--color-bg1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 700px;
+    margin: 0 auto;
+}
+  
+.post {
+    color: var(--color-light);
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+  
+.comment {
+    color: var(--color-primary);
+    font-size: 18px;
+    line-height: 1.5;
+    margin-left: 30px;
+}
+
+/* Comments */
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-column label,
+.flex-column textarea,
+.flex-column input[type="submit"] {
+    margin-bottom: 10px;
+}
+
+.flex-column label {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.flex-column textarea {
+    width: 700px;
+    height: 300px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.flex-column input[type="submit"] {
     background-color: var(--color-primary);
     color: var(--color-white);
     border: none;
@@ -321,33 +401,12 @@ li:hover a:before{
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
-    margin-bottom: 20px;
-  }
-
-#mybutton:hover {
-background-color: var(--color-bg);
-transition: var(--transition);
-
+    width: 700px;
 }
-  
-#comment_container {
-    background-color: var(--color-bg1);
-    padding: 20px;
-    border-radius: 10px;
-    width: 500px;
-    margin: 0 auto;
-  }
-  
-#post {
-    color: var(--color-primary);
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-#comment {
-    /*color: var(--color-white);*/
-    font-size: 18px;
-    line-height: 1.5;
-  }
+
+.flex-column input[type="submit"]:hover {
+    background-color: var(--color-bg);
+    transition: var(--transition);
+}
