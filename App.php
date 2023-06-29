@@ -107,10 +107,6 @@ class App
 
     public function addComment($content, $idUser)
     {
-        if (empty($content) && strlen($content) < 10) {
-            $this->msgError = "<p id='msgerror'>Your message must contain at least 10 characters.</p>";
-            return false;
-        }
         date_default_timezone_set('Europe/Paris');
         $date = date('Y-m-d H:i:s');
         try {

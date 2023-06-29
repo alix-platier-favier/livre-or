@@ -9,16 +9,15 @@ if (!isset($_SESSION['login'])) {
 }
 
 if ($_POST) {
-
+    $comment = htmlspecialchars($_POST['comment']);
     if (!empty($comment) && strlen($comment) > 10) {
         $app = new App;
-        $comment = htmlspecialchars($_POST['comment']);
         $idUser = $_SESSION['id_user'];
         if ($app->addComment($comment, $idUser)) {
             header("location: livreor.php");
         }
     } else {
-        $msgError = "<p id='msgerror'>Your message must contain at least 10 characters.</p>";
+        $app->msgError = "<p id='msgerror'>Your message must contain at least 10 characters.</p>";
     }
 }
 

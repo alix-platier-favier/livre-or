@@ -72,7 +72,7 @@ class MyPdo
 
     public function createComment($content, $idUser, $date)
     {
-        $stmt = $this->connection->prepare("INSERT INTO comment (content, id_user, date) VALUES (?, ?, ?)");
+        $stmt = $this->connection->prepare("INSERT INTO comment (comment, id_user, date) VALUES (?, ?, ?)");
         $stmt->execute([$content, $idUser, $date]);
     }
 }
